@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <title>Email-Template</title>
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="display: flex; flex-direction: column; padding: 15px;">
+      <div class="col-md-12 text-center">
+        <img src={{email_details.logo_link}} alt="logo">
+      </div>
+      <div class="col-12 mt-2 mb-2">
+        <p><b>Name:</b> {{customer_name}}</p>
+        <p><b>Email:</b> {{customer_email}}</p>
+        <p><b>Your Affiliate link is: </b><a href="{{affiliate_url}}">{{affiliate_url}}</a></p>
+        <p><b>Your Affiliate Dashboard URL is: </b><a href="{{affiliate_dashboard_url}}">{{affiliate_dashboard_url}}</a></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

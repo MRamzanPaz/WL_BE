@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <title>Email-Template</title>
+  <style>
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .social-icon {
+      width: 40%;
+      margin: 0 auto;
+    }
+
+    .wehope-para {
+      width: 100%;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    div.half {
+      max-width: 50%;
+      display: inline-block;
+    }
+
+    div.half1 {
+      max-width: 35%;
+      display: inline-block;
+    }
+
+    div.half1_1 {
+      max-width: 65%;
+      display: inline-block;
+    }
+
+    div.half2 {
+      align-self: center;
+      text-align: center;
+    }
+
+    .referRow {
+      height: fit-content;
+      padding: 15px;
+      background-color: #d5cfe6;
+    }
+
+    .btnCustom {
+      max-width: 50%;
+      background-color: #1c569f;
+      color: #fff !important;
+      margin: 0 auto;
+      text-align: center;
+      border-radius: 25px;
+      padding: 6px;
+    }
+
+    .btnCustom1 {
+      max-width: 50%;
+      background-color: #13ad71;
+      color: #fff !important;
+      margin: 0 auto;
+      text-align: center;
+      border-radius: 25px;
+      padding: 6px;
+    }
+
+    a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .link_custom,
+    .link_custom:hover {
+      color: #007bff;
+      text-decoration: underline;
+    }
+
+    .row1 {
+      padding: 15px;
+      background-color: #fdf8e4;
+    }
+
+    .row2 {
+      padding: 15px;
+      background-color: #fdeead;
+    }
+
+    .row2_col {
+      align-self: center;
+      text-align: center;
+    }
+
+    .row3 {
+      padding: 15px;
+      background-color: #cfe2e6;
+    }
+
+    .bold-text {
+      font-weight: bold;
+    }
+
+    .para_ref {
+      font-size: 22px;
+      font-weight: bold;
+      color: #1c569f;
+      text-align: center;
+    }
+
+    .para_ref1 {
+      font-size: 20px;
+      color: #000;
+      text-align: center;
+    }
+
+    .text-bold {
+      font-weight: bold !important;
+    }
+
+    .eSIM_prof_div {
+      background: #fff;
+      padding: 10px;
+      height: fit-content;
+      margin-top: auto;
+      margin-left: auto;
+    }
+
+    .note_div {
+      background: #fff;
+      border: 2px solid #1c569f;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .note_div p {
+      line-height: 1rem;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .eSIM_prof_div p {
+      line-height: 0.3rem;
+      font-size: 14px;
+    }
+
+    .table_div {
+      margin: auto auto;
+    }
+
+    .fa-exclamation-triangle {
+      font-size: 18px;
+      color: #1c569f;
+    }
+
+    .footer_row a {
+      color: #1c569f !important;
+    }
+
+    .rowVideo {
+      margin: 0 auto;
+      justify-content: space-around;
+    }
+
+    .box {
+      display: block;
+      padding: 2rem;
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 20px;
+    }
+
+    .box img {
+      border: 3px solid #000;
+    }
+
+
+    .box span {
+      display: block;
+      text-align: center;
+      font-size: 36px;
+      line-height: 56px;
+      color: #fff;
+      text-transform: uppercase;
+      background: #000;
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    div.table_div table.table tbody tr td {
+      color: #000 !important;
+    }
+
+    @media (max-width: 600px) {
+
+      .social-icon,
+      .wehope-para {
+        width: 100%;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+      div.half {
+        max-width: 100%;
+        display: block;
+      }
+      .referRow {
+        height: fit-content;
+      }
+      .btnCustom,
+      .btnCustom1 {
+        max-width: 100%;
+      }
+      .box {
+        width: 100%;
+        padding: 1rem;
+      }
+      div.half1 {
+        max-width: 100%;
+        display: inline-block;
+      }
+      div.half1_1 {
+        max-width: 100%;
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row mt-5 mb-2" style="padding: 15px;">
+      <div class="col-md-12 text-center">
+        <img src={{email_details.logo_link}} alt="logo">
+      </div>
+      <div class="col-12 mt-2 mb-2">
+        <p>Dear {{customer_name}}</p>
+        <p>Thank you for using {{email_details.wl_name}}.</p>
+        <p class="wehope-para">We hope you enjoy using your {{email_details.wl_name}} eSIM and we look forward to keeping you
+          connected
+          wherever you
+          are in the world and whenever you travel.</p>
+          <p><b>Customer dashboard Link:</b> {{customer_dashboard_url}}</p>
+        <p><b>Email:</b> {{customer_email}}</p>
+        <p><b>Password:</b> {{customer_pass}}</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

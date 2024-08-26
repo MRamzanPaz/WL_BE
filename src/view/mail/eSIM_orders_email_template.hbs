@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNet eSIM Order Confirmation</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6eef8;
+            /* A light blue that complements the primary colors */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #c4d3e0;
+            /* A softer blue border */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(16, 66, 108, 0.2);
+            /* Shadow that uses the blue color */
+        }
+
+        .header {
+            background-color: #10426C;
+            /* Deep ocean blue */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px 8px 8px 8px;
+        }
+
+        .content {
+            font-size: 16px;
+            color: #333333;
+            /* Darker text for readability */
+            line-height: 1.6;
+            border-bottom: 1px solid #d6e1ee;
+            /* Soft separator */
+            padding: 20px;
+        }
+
+        .important-note {
+            background-color: #f16c22;
+            /* Vibrant sunset orange */
+            color: #ffffff;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .footer {
+            font-size: 14px;
+            text-align: center;
+            color: #ffffff;
+            background-color: #10426C;
+            /* Deep ocean blue */
+            padding: 10px;
+            border-radius: 8px 8px 8px 8px;
+        }
+
+        a {
+            color: #f16c22;
+            /* Vibrant sunset orange */
+            text-decoration: none;
+            transition: color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        a:hover {
+            color: #cc561e;
+            /* A darker shade of orange for hover state */
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .logo-placeholder {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo-placeholder img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .social-media-links {
+            margin-top: 10px;
+        }
+
+        .apn-setup {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-placeholder">
+            <img src={{email_details.logo_link}} alt="Logo">
+        </div>
+        <div class="header">
+            <h1>Order Confirmation</h1>
+        </div>
+        <div class="content">
+            <p><strong>Order Number:</strong> {{order_id}}</p>
+            <p><strong>Order Date:</strong> {{order_date}}</p>
+            <p><strong>Payment Type:</strong> {{paymentType}}</p>
+            {{#if showOrderPrice}}
+            <p><strong>Amount:</strong> ${{payment}}</p>
+            {{/if}}
+            <p><strong>ICCID:</strong> {{iccid}}</p>
+            <p><strong>APN (Access Point Name):</strong> {{apn}}</p>
+            <p><strong>Data Roaming:</strong> {{dataRoaming}}</p>
+            <p><strong>Issue to:</strong> {{email}}</p>
+            <p><strong>Order Summary:</strong> {{planName}}</p>
+
+            <p class="header">QR CODE:</p>
+            <div style="text-align: center;">
+                <img src={{qr_url}} alt="QR Code" style="width:100%; max-width:200px;">
+            </div>
+            <div style="text-align: center; padding: 0px; margin: 0px 0;">
+                <p>Please connect to a <strong>Wi-Fi</strong> network before installing the eSIM</p>
+            </div>
+            <p class="header">Manual Installation for iOS</p>
+            <p><strong>SM - DP + Address:</strong> {{iosAddress}}</p>
+            <p><strong>Activation Code:</strong> {{iosURL}}</p>
+
+            <p class="header">Manual Installation for Android</p>
+            <p><strong>Activation Code:</strong> {{qrCodeString}}</p>
+
+
+            <p class="header">Setup Instructions for your new eSIM</p>
+            <p>Android User: <a href={{email_details.android_vedio_link}}>Setup Video</a></p>
+            <p>iOS User: <a href={{email_details.iOS_vedio_link}}>Setup Video</a></p>
+
+            {{!-- <p class="header">APN Setup Instructions</p>
+            <div class="apn-setup">
+                <p>If an APN is provided in the eSIM details above, you can follow the instructions in the <a
+                        href="https://youtu.be/9v7cvxaiLhM">APN setup video</a>.</p>
+            </div> --}}
+        </div>
+        {{!-- <div style="text-align: center; padding: 0px; margin: 0px 0; border-bottom: 1px solid #d6e1ee;">
+            <p style="font-size: 16px; color: #333333; line-height: 1.6;">
+                To view your balance and top up, <a href="https://travelnet.world/account/register">create an
+                    account</a> on our website using your purchase email.
+            </p>
+        </div> --}}
+        <div class="important-note">
+            <p>Note: Please ensure that your data roaming is on.</p>
+            <p>IMPORTANT NOTE: This eSIM profile can be downloaded only once. Please do not delete/remove the eSIM
+                cellular plan from your phone settings until you are done using it. Once deleted, the eSIM profile
+                cannot be restored. Please follow the activation steps.</p>
+        </div>
+
+        {{#if affiliateUrl}}
+        <div class="footer">
+
+            <p>Refer a friend</p>
+            <p>Refer us to your Friends and earn credits for future purchases. Here is your Referral Code:</p>
+            <p><a href="{{affiliateUrl}}">{{affiliateUrl}}</a></p>
+            <p style="color: black;">
+                Affiliate Dashboard Link: <a href="{{affiliate_dashboard_url}}">{{affiliate_dashboard_url}}</a>
+            </p>
+        </div>
+
+        {{/if}}
+    </div>
+</body>
+
+</html>

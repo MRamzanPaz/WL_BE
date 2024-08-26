@@ -1,0 +1,126 @@
+{
+    "Benin": [
+        {
+            "network": "MTN",
+            "Value": "1.2% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "Moov",
+            "Value": "1.2% MNO fee + 1% pawaPay fee"
+        }
+    ],
+    "Cameroon": [
+        {
+            "network": "MTN",
+            "Value": "0.75% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "Orange",
+            "Value": "0.77% MNO fee + 1% pawaPay fee",
+            "fixedinpercent": "0.77",
+            "pawapatInpercent": "1"
+        }
+    ],
+    "DRC": [
+        {
+            "network": "Airtel",
+            "Value": "2% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "Orange",
+            "Value": "2% MNO fee + 1% pawaPay fee"
+        }
+    ],
+    "Ghana": [
+        {
+            "network": "AirtelTigo (AT)",
+            "Value": "1% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "MTN",
+            "Value": "1% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "Vodafone",
+            "Value": "1% MNO fee + 1% pawaPay fee"
+        }
+    ],
+    "IvoryCoast": [
+        {
+            "network": "MTN",
+            "Value": "1.5% MNO fee + 1% pawaPay fee"
+        }
+    ],
+    "Malawi": [
+        {
+            "network": "Airtel",
+            "Value": "2.33% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "TNM",
+            "Value": "2% MNO fee + 1% pawaPay fee"
+        }
+    ],
+    "Rwanda": [
+        {
+            "network": "Airtel",
+            "Value": "1.77% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "MTN",
+            "Value": "2.36% MNO fee + 1% pawaPay fee"
+        }
+    ],
+    "Senegal": [
+        {
+            "network": "FREE",
+            "Value": "1% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "Orange",
+            "Value": "1% MNO fee + 1% pawaPay fee"
+        }
+    ],
+    "Tanzania": [
+        {
+            "network": "Airtel",
+            "Value": "2% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "HELOPESA",
+            "Value": "1% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "TIGO",
+            "Value": "1% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "Vodacom",
+            "Value": "1% MNO fee + 1% pawaPay fee"
+        }
+    ],
+    "Uganda": [
+        {
+            "network": "Airtel",
+            "Value": "2% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "MTN",
+            "Value": "2.5% MNO fee + 1% pawaPay fee"
+        }
+    ],
+    "Zambia": [
+        {
+            "network": "Airtel",
+            "Value": "2% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "MTN",
+            "Value": "2% MNO fee + 1% pawaPay fee"
+        },
+        {
+            "network": "Zamtel",
+            "Value": "2% MNO fee + 1% pawaPay fee"
+        }
+    ]
+}

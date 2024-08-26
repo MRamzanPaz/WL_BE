@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fdf8e4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-container{
+        background-color: #fdf8e4;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    h3 {
+      color: #0a0a0a;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 10px;
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    table, th, td {
+      border: 1px solid #f5e191;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+     
+      font-weight: 800;
+      color: #030303;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <div>
+        <img src={{logo_link}} alt="logo">
+      </div>
+      <div>
+        <p>Dear {{customer_name}},</p>
+        <p>Thank you for using {{wl_name}}.</p>
+        <p>We hope you enjoy using your {{wl_name}} eSIM and we look forward to keeping you
+          connected wherever you are in the world and whenever you travel.</p>
+      </div>
+    </div>
+    <div>
+      <div class="content-container">
+        <h3>Recharge Summary</h3>
+        <table>
+          <tbody>
+             <tr>
+              <th>Order No:</th>
+              <td>{{order_no}}</td>
+            </tr>
+            <tr>
+              <th>ICCID:</th>
+              <td>{{iccid}}</td>
+            </tr>
+            <tr>
+              <th>Plan:</th>
+              <td>{{plan_name}}</td>
+            </tr>
+            <tr>
+              <th>Data:</th>
+              <td>{{data}}</td>
+            </tr>
+            <tr>
+              <th>Validity:</th>
+              <td>{{validity}}</td>
+            </tr>
+            <tr>
+              <th>Order Total:</th>
+              <td>${{price}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+

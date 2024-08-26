@@ -1,0 +1,34 @@
+import { ActivatedESims } from "./activatedEsim.entity";
+import { Coupons } from "./coupon.entity";
+import { CouponsDetails } from "./couponsDetails.entity";
+import { Customers } from "./customer.entity";
+import { CustomerWallet } from "./customer_wallet.entity";
+import { CustomerWalletHistory } from "./customer_wallet_history.entity";
+import { Devices } from "./devices.entity";
+import { Logs } from "./log.entity";
+import { EsimOrders } from "./esim-orders.entity";
+import { Plans } from "./plans.entites";
+import { plans_Counties } from "./plans_countries.entity";
+import { TopupOrders } from "./topup-orders.entity";
+import { Transactions } from "./transactions.entity";
+import { MobileMoneyTransactions } from "./mobile_money_transactions.entity";
+import { Contact } from "./contact.entity";
+import { FAQ } from "./faq.entity";
+import { Affiliate } from "./affiliate.entity";
+import { Reseller } from "./reseller.entity";
+import { EmailSetting } from "./mail-setting.entity";
+import { Countries } from "./country.entity";
+import { PaymentCacheFW } from "./paymentCache.entity";
+import { RefundActivities } from "./refundActivities.entity";
+import { CustomerVerification } from "./customer_verification";
+import { PawaPayRefunds } from "./pawaPayRefunds.entity";
+import { PawapayCountries } from "./pawapay_countries.entity";
+import { PawapayNetworks } from "./pawapay_network.entity";
+import { PawapayTransactions } from "./pawapayTransactions.entity";
+import { AccountingReport } from "./accounting_report.entity";
+import { States } from "./states.entity";
+import { Cities } from "./cities.entity";
+
+const entities = [Logs, Plans, plans_Counties, States, Cities, Customers, CustomerVerification, Coupons, EsimOrders, Transactions, CouponsDetails, Devices, CustomerWallet, CustomerWalletHistory, ActivatedESims, TopupOrders, MobileMoneyTransactions, Contact, FAQ, Affiliate, Reseller, EmailSetting, Countries, RefundActivities, PawaPayRefunds, PawapayTransactions, AccountingReport];
+
+export default entities;
